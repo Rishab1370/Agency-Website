@@ -92,48 +92,49 @@ export default function Hero() {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.2 }}
-              className="mb-6"
+              className="mb-8"
               style={{
                 fontFamily: "var(--font-display)",
-                fontSize: "clamp(2.6rem, 5vw, 3.8rem)",
-                fontWeight: 700,
-                lineHeight: 1.08,
-                letterSpacing: "-0.02em",
+                lineHeight: 1.05,
                 color: "var(--color-text-primary)",
               }}
             >
-              Exquisite Web Design &{" "}
-              <span className="gradient-text">AI-Powered Solutions</span>
+              Scale Your Business Through{" "}
+              <span className="gradient-text">AI-Driven Digital Systems</span>
             </motion.h1>
 
             <motion.p
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, delay: 0.35 }}
-              className="section-subtitle mb-10"
-              style={{ color: "var(--color-text-secondary)" }}
+              className="section-subtitle mb-12 text-lg sm:text-xl"
+              style={{ color: "var(--color-text-secondary)", maxWidth: "100%" }}
             >
-              We craft premium digital experiences, high-conversion websites, and smart automation
-              that help businesses scale with precision and innovation.
+              We help small businesses and startups automate complex workflows and
+              maximize revenue with high-performance digital infrastructure.
             </motion.p>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.5 }}
-              className="flex flex-wrap gap-4"
+              className="flex flex-wrap gap-5"
             >
-              <button onClick={() => openModal()} className="btn-primary">
-                Book Free Consultation
-                <ArrowRight size={16} />
+              <button
+                onClick={() => openModal()}
+                className="btn-primary text-base sm:text-lg px-8 py-4 shadow-xl active:scale-95"
+                style={{ boxShadow: '0 20px 40px -10px rgba(70, 102, 255, 0.5)' }}
+              >
+                Book Free Strategy Call
+                <ArrowRight size={18} />
               </button>
-              <a href="#case-studies" className="btn-ghost" style={{
+              <a href="#case-studies" className="btn-ghost px-8 py-4 text-base" style={{
                 background: "color-mix(in srgb, var(--color-primary), transparent 92%)",
                 color: "var(--color-text-primary)",
                 border: "1px solid color-mix(in srgb, var(--color-primary), transparent 85%)"
               }}>
-                <Play size={15} fill="currentColor" className="mr-1" />
-                View Our Work
+                <Play size={16} fill="currentColor" className="mr-2" />
+                View Our Portfolio
               </a>
             </motion.div>
           </div>

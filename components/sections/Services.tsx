@@ -33,7 +33,7 @@ export default function Services() {
   const { mode } = useThemeMode();
 
   return (
-    <section id="services" className="relative py-20 overflow-hidden" style={{ background: "var(--color-bg)" }}>
+    <section id="services" className="relative section-container overflow-hidden" style={{ background: "var(--color-bg)" }}>
       {/* Background */}
       <div
         className="glow-blob w-[400px] h-[400px]"
@@ -69,15 +69,15 @@ export default function Services() {
             return (
               <StaggerItem key={service.id}>
                 <motion.div
-                  className="p-7 h-full flex flex-col group rounded-2xl border transition-all duration-300"
+                  className="p-8 h-full flex flex-col group rounded-2xl border transition-all duration-300"
                   style={{
                     background: "var(--color-surface)",
                     borderColor: "var(--color-border)",
                   }}
                   whileHover={{
-                    scale: 1.02,
+                    y: -8,
                     borderColor: mode === "dark" ? "rgba(70, 102, 255, 0.4)" : "rgba(70, 102, 255, 0.2)",
-                    boxShadow: mode === "dark" ? "0 20px 40px -10px rgba(0,0,0,0.5)" : "var(--shadow-md)"
+                    boxShadow: mode === "dark" ? "0 25px 50px -12px rgba(0,0,0,0.5)" : "0 25px 50px -12px rgba(70, 102, 255, 0.1)"
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 >

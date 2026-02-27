@@ -13,7 +13,7 @@ export default function CaseStudies() {
   return (
     <section
       id="case-studies"
-      className="relative py-20 overflow-hidden"
+      className="relative section-container overflow-hidden"
       style={{ background: "var(--color-bg)" }}
     >
       <div
@@ -94,36 +94,62 @@ export default function CaseStudies() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6 flex flex-col flex-1">
-                  <p className="text-xs font-semibold mb-2" style={{ color: study.color, fontFamily: "var(--font-display)" }}>
-                    {study.type}
-                  </p>
-                  <h3
-                    className="text-lg font-bold mb-3 transition-colors duration-200"
-                    style={{ fontFamily: "var(--font-display)", color: "var(--color-text-primary)" }}
-                  >
-                    {study.title}
-                  </h3>
-                  <p className="text-sm leading-relaxed mb-5 flex-1" style={{ color: "var(--color-text-secondary)" }}>
+                <div className="p-7 flex flex-col flex-1">
+                  <div className="flex items-start justify-between mb-4">
+                    <div>
+                      <p className="text-xs font-bold uppercase tracking-wider mb-1" style={{ color: study.color, opacity: 0.8 }}>
+                        {study.type}
+                      </p>
+                      <h3
+                        className="text-xl font-bold transition-colors duration-200"
+                        style={{ fontFamily: "var(--font-display)", color: "var(--color-text-primary)" }}
+                      >
+                        {study.title}
+                      </h3>
+                    </div>
+                    {/* Result Badge */}
+                    {study.result && (
+                      <div
+                        className="px-3 py-1.5 rounded-lg text-[10px] font-black uppercase tracking-tighter"
+                        style={{
+                          background: `${study.color}20`,
+                          color: study.color,
+                          border: `1px solid ${study.color}40`,
+                          boxShadow: `0 0 20px ${study.color}15`
+                        }}
+                      >
+                        {study.result}
+                      </div>
+                    )}
+                  </div>
+
+                  <p className="text-sm leading-relaxed mb-6 flex-1" style={{ color: "var(--color-text-secondary)" }}>
                     {study.description}
                   </p>
 
-                  {/* Metrics */}
-                  <div className="flex flex-wrap gap-2">
-                    {study.metrics.map((metric, i) => (
-                      <span
-                        key={i}
-                        className="text-xs px-3 py-1 rounded-full font-medium"
-                        style={{
-                          background: `${study.color}15`,
-                          border: `1px solid ${study.color}30`,
-                          color: study.color,
-                          fontFamily: "var(--font-display)",
-                        }}
-                      >
-                        {metric}
-                      </span>
-                    ))}
+                  {/* Metrics & Tech */}
+                  <div className="space-y-4">
+                    <div className="flex flex-wrap gap-2">
+                      {study.metrics.map((metric, i) => (
+                        <div
+                          key={i}
+                          className="flex items-center gap-1.5 text-xs font-medium"
+                          style={{ color: "var(--color-text-primary)" }}
+                        >
+                          <div className="w-1 h-1 rounded-full" style={{ background: study.color }} />
+                          {metric}
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Tech Stack Footer */}
+                    <div className="pt-4 border-t flex items-center gap-3" style={{ borderColor: 'var(--color-border)' }}>
+                      {study.techs?.map((tech, i) => (
+                        <span key={i} className="text-[10px] font-bold uppercase opacity-40 hover:opacity-100 transition-opacity" style={{ color: 'var(--color-text-secondary)' }}>
+                          {tech}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 

@@ -11,7 +11,7 @@ export default function CTASection() {
   return (
     <section
       id="contact"
-      className="relative py-20 overflow-hidden"
+      className="relative section-container overflow-hidden"
       style={{ background: "var(--color-bg)" }}
     >
       {/* Animated gradient background */}
@@ -51,18 +51,14 @@ export default function CTASection() {
           </motion.div>
 
           <h2
-            className="mb-6"
+            className="mb-8"
             style={{
               fontFamily: "var(--font-display)",
-              fontSize: "clamp(2.2rem, 5vw, 3.5rem)",
-              fontWeight: 700,
               lineHeight: 1.1,
-              letterSpacing: "-0.02em",
               color: "var(--color-text-primary)",
             }}
           >
-            Ready to Build Something{" "}
-            <span className="gradient-text">Intelligent?</span>
+            Ready to <span className="gradient-text">Dominate Your Market?</span>
           </h2>
 
           <p
@@ -90,7 +86,7 @@ export default function CTASection() {
               whileHover={{ scale: 1.03 }}
               whileTap={{ scale: 0.97 }}
               style={{
-                padding: "15px 32px",
+                padding: "16px 32px",
                 fontSize: "15px",
                 border: "1px solid var(--color-border)",
                 background: "var(--color-surface)",
@@ -102,6 +98,10 @@ export default function CTASection() {
               <ArrowRight size={15} />
             </motion.a>
           </div>
+
+          <p className="text-sm font-semibold mb-12" style={{ color: "var(--color-text-muted)" }}>
+            No spam. Zero-obligation strategy call.
+          </p>
 
           {/* Trust indicators */}
           <div className="flex flex-wrap items-center justify-center gap-6">

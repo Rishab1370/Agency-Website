@@ -73,7 +73,7 @@ export default function Navbar() {
                 <Link
                   key={link.label}
                   href={link.href}
-                  className="px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
+                  className="px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-200"
                   style={{
                     color: "var(--color-text-secondary)",
                     fontFamily: "var(--font-display)",
@@ -96,10 +96,10 @@ export default function Navbar() {
             <div className="hidden md:flex items-center gap-3">
               <button
                 onClick={() => openModal()}
-                className="btn-primary text-sm"
+                className="btn-primary text-sm shadow-glow-primary"
                 style={{ padding: "10px 22px" }}
               >
-                Book Free Consultation
+                Book Free Strategy Call
               </button>
             </div>
 
@@ -171,7 +171,7 @@ export default function Navbar() {
                 }}
                 className="btn-primary text-sm mt-2 justify-center"
               >
-                Book Free Consultation
+                Book Free Strategy Call
               </button>
             </div>
           </motion.div>

@@ -21,7 +21,7 @@ export default function Process() {
   return (
     <section
       id="process"
-      className="relative py-20 overflow-hidden"
+      className="relative section-container overflow-hidden"
       style={{ background: "var(--color-bg)" }}
     >
       <div
@@ -127,6 +127,27 @@ export default function Process() {
               );
             })}
           </div>
+
+          {/* Delivery Guarantee */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="mt-20 text-center"
+          >
+            <div
+              className="inline-flex items-center gap-3 px-6 py-3 rounded-2xl border"
+              style={{
+                background: mode === "dark" ? "rgba(71, 255, 155, 0.05)" : "rgba(71, 255, 155, 0.03)",
+                borderColor: mode === "dark" ? "rgba(71, 255, 155, 0.2)" : "rgba(71, 255, 155, 0.1)"
+              }}
+            >
+              <div className="w-2 h-2 rounded-full animate-pulse" style={{ background: "#47FF9B" }} />
+              <span className="text-sm font-bold uppercase tracking-widest" style={{ color: "#47FF9B" }}>
+                Typical Project Delivery: 2–4 Weeks
+              </span>
+            </div>
+          </motion.div>
         </div>
       </div>
     </section>

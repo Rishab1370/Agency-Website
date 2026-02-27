@@ -31,7 +31,7 @@ export default function Industries() {
   return (
     <section
       id="industries"
-      className="relative py-20 overflow-hidden"
+      className="relative section-container overflow-hidden"
       style={{ background: "var(--color-surface)" }}
     >
       <div
@@ -66,15 +66,15 @@ export default function Industries() {
             return (
               <StaggerItem key={industry.id}>
                 <motion.div
-                  className="p-7 flex flex-col gap-4 group rounded-2xl border transition-all duration-300"
+                  className="p-8 flex flex-col gap-4 group rounded-2xl border transition-all duration-300"
                   style={{
                     background: "var(--color-bg)",
                     borderColor: "var(--color-border)",
                   }}
                   whileHover={{
-                    scale: 1.02,
+                    y: -6,
                     borderColor: mode === "dark" ? "rgba(70, 102, 255, 0.4)" : "rgba(70, 102, 255, 0.2)",
-                    boxShadow: mode === "dark" ? "0 20px 40px -10px rgba(0,0,0,0.5)" : "var(--shadow-md)"
+                    boxShadow: mode === "dark" ? "0 25px 50px -12px rgba(0,0,0,0.5)" : "0 25px 50px -12px rgba(70, 102, 255, 0.1)"
                   }}
                   transition={{ type: "spring", stiffness: 300, damping: 25 }}
                 >

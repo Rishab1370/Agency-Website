@@ -33,7 +33,7 @@ export default function Testimonials() {
   return (
     <section
       id="testimonials"
-      className="relative py-20 overflow-hidden"
+      className="relative section-container overflow-hidden"
       style={{ background: "var(--color-bg)" }}
     >
       <div
@@ -110,17 +110,17 @@ export default function Testimonials() {
                 >
                   {testimonials[current].name}
                 </div>
-                <div className="text-sm mb-0.5" style={{ color: "var(--color-text-secondary)" }}>
+                <div className="text-sm font-bold mt-1" style={{ color: "var(--color-text-secondary)" }}>
                   {testimonials[current].role}
                 </div>
-                <div className="text-xs font-semibold mb-3" style={{ color: "var(--color-primary)" }}>
+                <div className="text-xs font-semibold mb-4" style={{ color: "var(--color-primary)" }}>
                   {testimonials[current].company}
                 </div>
 
                 {/* Stars */}
-                <div className="flex gap-0.5">
-                  {Array.from({ length: testimonials[current].rating }).map((_, i) => (
-                    <Star key={i} size={14} color="#FFB347" fill="#FFB347" />
+                <div className="flex gap-1 mb-4">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star key={i} size={16} color="#FFB347" fill={i < testimonials[current].rating ? "#FFB347" : "transparent"} />
                   ))}
                 </div>
 

@@ -251,6 +251,35 @@
     font-family: var(--font-display);
     letter-spacing: 0.02em;
   }
+
+  .section-container {
+    padding-top: 5rem; /* 80px */
+    padding-bottom: 5rem; /* 80px */
+  }
+
+  @media (min-width: 1024px) {
+    .section-container {
+      padding-top: 7.5rem; /* 120px */
+      padding-bottom: 7.5rem; /* 120px */
+    }
+  }
+
+  h1 {
+    font-size: clamp(2.8rem, 6vw, 4.5rem) !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
+  }
+
+  h2 {
+    font-size: clamp(2.2rem, 5vw, 3.2rem) !important;
+    line-height: 1.1 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  h3 {
+    font-size: clamp(1.4rem, 3vw, 1.8rem) !important;
+    line-height: 1.2 !important;
+  }
 }
 
 @keyframes float-0 {
