@@ -7,7 +7,7 @@
 ---
 
 ## 🚀 Live Demo
-Check out the live repository and code: [GitHub Repo](https://github.com/Rishab1370/Agency-Website)
+Check out the live repository and code: [GitHub Repo](https://agency-website-nine-mu.vercel.app/)
 
 ---
 
